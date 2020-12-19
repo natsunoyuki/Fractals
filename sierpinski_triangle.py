@@ -3,6 +3,19 @@ import matplotlib.pyplot as plt
 from scipy import random
 
 def sierpins(N):
+    """
+    This function generates the sierpinski triangle fractal
+    
+    Input
+    -----
+    N: int
+        number of points to generate
+        
+    Returns
+    -------
+    X: np.array
+        np.array of points of the cantor box
+    """    
     X = np.zeros([N + 1, 2])
 
     for k in range(N):
