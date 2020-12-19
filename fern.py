@@ -2,6 +2,19 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def fern(N):
+    """
+    This function generates the barnsley fern fractal
+    
+    Input
+    -----
+    N: int
+        number of points to generate
+        
+    Returns
+    -------
+    X: np.array
+        np.array of points of the cantor box
+    """
     x = np.zeros([N + 1, 2])
     x[0, :] = np.array([0.5, 0.5])
     for k in range(N):
