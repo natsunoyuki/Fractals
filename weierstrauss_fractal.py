@@ -17,6 +17,13 @@ def weierstrauss_fractal(x0 = -1, x1 = 1, Nx = 2000, a = 0.5, n_iter = 20):
         weierstrauss fractal factor
     n_iter: int
         number of iterations to run
+        
+    Returns
+    -------
+    x: np.array
+        x axis values
+    f: np.array
+        f(x) containing the fractal
     """
     x = np.linspace(x0, x1, Nx)
     f = np.zeros(len(x))
