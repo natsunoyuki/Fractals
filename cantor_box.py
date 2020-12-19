@@ -2,6 +2,19 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def cantor_box(N):
+    """
+    This function generates the cantor box fractal
+    
+    Input
+    -----
+    N: int
+        number of points to generate
+        
+    Returns
+    -------
+    X: np.array
+        np.array of points of the cantor box
+    """
     X = np.zeros([N + 1, 2])
 
     for k in range(N):
