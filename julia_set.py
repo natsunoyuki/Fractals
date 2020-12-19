@@ -2,6 +2,27 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def julia_set(num_iter = 50, N = 1000, X0 = np.array([-2, 2, -2, 2])):
+    """
+    Generates the Julia set fractal
+    
+    Inputs
+    ------
+    num_iter: int
+        number of iterations to run
+    N: int
+        number of grid points on each axis to use. We use a square grid
+    X0: np.array
+        bounding box of the square grid to use
+    
+    Returns
+    -------
+    x: np.array
+        x axis vlaues
+    y: np.array
+        y axis values
+    F: np.array
+        2D np.array containing the fractal
+    """
     x0 = X0[0]
     x1 = X0[1]
     y0 = X0[2]
