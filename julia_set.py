@@ -42,7 +42,7 @@ def julia_set(num_iter = 50, N = 1000, X0 = np.array([-2, 2, -2, 2])):
     
 if __name__ == '__main__':
     x, y, F = julia_set()
-    plt.figure(figsize = (8, 8))
+    plt.figure(figsize = (10, 10))
     plt.pcolormesh(x, y, F, cmap = 'binary')
     plt.axis('equal')
     plt.axis('off')
