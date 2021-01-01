@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy import random
 
-def sierpins(N):
+def sierpinski_triangle(N):
     """
     This function generates the sierpinski triangle fractal
     
@@ -33,7 +33,7 @@ def sierpins(N):
     return X[:,0], X[:,1]
         
 if __name__ == '__main__':
-    x, y = sierpins(1000000)
+    x, y = sierpinski_triangle(1000000)
     plt.figure(figsize = (10, 10))
     plt.plot(x, y, '.', markersize = 0.2)
     plt.axis('equal')
