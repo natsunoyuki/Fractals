@@ -34,7 +34,7 @@ def sierpins(N):
         
 if __name__ == '__main__':
     x, y = sierpins(1000000)
-    plt.figure(figsize = (8, 8))
+    plt.figure(figsize = (10, 10))
     plt.plot(x, y, '.', markersize = 0.2)
     plt.axis('equal')
     plt.axis('off')
