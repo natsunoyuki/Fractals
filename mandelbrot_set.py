@@ -43,7 +43,7 @@ def mandelbrot_set(num_iter = 50, N = 1000, X0 = np.array([-2, 2, -2, 2])):
    
 if __name__ == '__main__':
     x, y, F = mandelbrot_set(X0 = [-2, 1, -1.5, 1.5])
-    plt.figure(figsize = (8, 8))
+    plt.figure(figsize = (10, 10))
     plt.pcolormesh(x, y, F, cmap = 'binary')
     plt.axis('equal')
     plt.axis('off')
