@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def weierstrauss_fractal(x0 = -1, x1 = 1, Nx = 2000, a = 0.5, n_iter = 20):
+def weierstrauss_fractal(x0 = -1, x1 = 1, Nx = 10000, a = 0.5, n_iter = 20):
     """
     Generate the weierstrauss fractal
     
@@ -36,6 +36,9 @@ def weierstrauss_fractal(x0 = -1, x1 = 1, Nx = 2000, a = 0.5, n_iter = 20):
     
 if __name__ == '__main__':
     x, f = weierstrauss_fractal()
-    plt.figure(figsize=(10, 5))
+    plt.figure(figsize=(15, 5))
     plt.plot(x, f)
+    plt.grid(True)
+    plt.xlabel("x")
+    plt.ylabel("f(x)")
     plt.show()
