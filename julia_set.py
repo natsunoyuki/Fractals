@@ -1,7 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def julia_set(num_iter = 50, N = 1000, X0 = np.array([-2, 2, -2, 2])):
+import warnings
+warnings.filterwarnings("ignore")
+
+def julia_set(c = -0.835 - 0.2321 * 1j, num_iter = 50, N = 1000, X0 = np.array([-2, 2, -2, 2])):
     """
     Generates the Julia set fractal
     
@@ -27,16 +30,19 @@ def julia_set(num_iter = 50, N = 1000, X0 = np.array([-2, 2, -2, 2])):
     x1 = X0[1]
     y0 = X0[2]
     y1 = X0[3]
-    i = 1j
     
-    x, y = np.meshgrid(np.linspace(x0, x1, N), np.linspace(y0, y1, N) * i)
+    # Set up the complex grid z = x + yi
+    x, y = np.meshgrid(np.linspace(x0, x1, N), np.linspace(y0, y1, N) * 1j)
     z = x + y
+    
+    # F keeps track of which grid points are bounded
+    # even after many iterations of z_n+1 = z_n**2 + c.
     F = np.zeros([N, N])
     
     for j in range(num_iter):
+        z = z ** 2 + c
         index = np.abs(z) < np.inf
         F[index] = F[index] + 1
-        z = z ** 2 + -0.835 - 0.2321 * i
 
     return np.linspace(x0,x1,N), np.linspace(y0,y1,N), F
     
