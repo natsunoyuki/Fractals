@@ -35,9 +35,9 @@ def mandelbrot_set(num_iter = 50, N = 1000, X0 = np.array([-2, 2, -2, 2])):
     F = np.zeros([N, N])
     
     for j in range(num_iter):
+        z = z ** 2 + c 
         index = np.abs(z) < np.inf
         F[index] = F[index] + 1
-        z = z ** 2 + c 
 
     return np.linspace(x0, x1, N), np.linspace(y0, y1, N), F
    
