@@ -1,2 +1,2 @@
 # Fractals
-This is a set of python scripts for making Fractals.
+This is a python package for generating and visualizing fractals.
